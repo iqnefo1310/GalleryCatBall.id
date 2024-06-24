@@ -1,0 +1,12 @@
+body{
+    background-color: #f2f2f8;
+}
+
+h1 + p{
+    text-align: center;
+}
+
+section h1,
+section h2{
+    padding: 20px 10px;
+}

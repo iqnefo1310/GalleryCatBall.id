@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navig-hp {
+    position: fixed;
+    transform: translateX(-100%);
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    background-color: #373636;
+}
+
+.toogle {
+    position: fixed;
+    z-index: 999;
+    right: 0;
+    margin: 10px;
+    width: 2rem;
+    height: 2rem;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    margin: 10px;
+    z-index: 998;
+}
+
+.hamburger .line {
+    background-color: black;
+    width: 30px;
+    height: 5px;
+    margin: 2px;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.toogle:checked~.navig-hp {
+    transform: translateX(0%);
+}
+
+@media screen and (max-width:768px) {
+    .navig-lap {
+        display: none;
+    }
+
+    .toogle {
+        opacity: 0;
+    }
+    header{
+        font-size: 4mm;
+    }
+
+}
+
+@media screen and (min-width:768px) {
+    .navig-hp {
+        display: none;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .toogle {
+        display: none;
+    }
+
+    header{
+        font-size:6mm;
+    }
+    
+}
+
+header{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+}
+
+/* hamburger checked */
+.toogle:checked~.hamburger .satu {
+    transform: translate(0, 9px) rotate(-45deg);
+    background-color: aqua;
+}
+
+.toogle:checked~.hamburger .dua {
+    opacity: 0;
+}
+
+.toogle:checked~.hamburger .tiga {
+    transform: translate(0, -9px) rotate(45deg);
+    background-color: aquamarine;
+}
+
+header .h1header {
+    display: flex;
+    position: fixed;
+    padding: 10px;
+    background-color: #f4f6f8;
+    position: fixed;
+    width: 100%;
+    border-bottom: #4a2323 1px solid;
+}
+
+.navig-lap ul {
+    display: flex;
+    position: fixed;
+    margin: 30px;
+    right: 0;
+    list-style: none;
+    gap: 20px;
+}
+
+.navig-lap ul li {
+    background-color: #4a2323;
+    padding: 2px 10px;
+    border-radius: 20px;
+}
+
+.navig-lap ul li a {
+    text-decoration: none;
+    color: aliceblue;
+
+}
+
+.navig-hp ul {
+    width: 50vw;
+    background-color: #4a2323;
+    height: 100vh;
+    margin: auto;
+    text-align: center;
+}
+.navig-hp ul li {
+
+    list-style: none;
+    width: 100%;
+    padding: 20px;
+    border-bottom: 2px solid aliceblue;
+}
+.navig-hp ul li a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+main{
+    max-width: 800px;
+    margin: auto;
+    padding: 80px 10px 10px 10px;
+    background-color: gainsboro;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    min-height: 100vh;
+}
